@@ -21,11 +21,12 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
+
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
 // Set `$autoRoutesImproved` to true in `app/Config/Feature.php` and set the following to true.
-$routes->setAutoRoute(true);
+// $routes->setAutoRoute(false);
 
 /*
  * --------------------------------------------------------------------
@@ -35,7 +36,8 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('unidades', 'Unidades::index');
+$routes->get('/', 'Home::index');
+
 
 /*
  * --------------------------------------------------------------------
@@ -53,3 +55,25 @@ $routes->get('unidades', 'Unidades::index');
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
+$routes->setAutoRoute(true);
+$routes->get('unidades', 'Unidades::index');
+
+$routes->get('unidades/nuevo', 'Unidades::nuevo');
+
+$routes->post('unidades/insertar', 'Unidades::insertar');
+
+$routes->get('unidades/editar/(:num)', 'Unidades::editar/$1');
+$routes->get('unidades/eliminar/(:num)', 'Unidades::eliminar/$1');
+$routes->post('unidades/actualizar', 'Unidades::actualizar');
+$routes->get('unidades/eliminados', 'Unidades::eliminados');
+$routes->get('unidades/reingresar/(:num)', 'Unidades::reingresar/$1');
+
+ //categorias
+$routes->get('categorias', 'Categorias::index');
+$routes->get('categorias/nuevo', 'Categorias::nuevo');
+$routes->post('categorias/insertar', 'Categorias::insertar');
+$routes->get('categorias/editar/(:num)', 'Categorias::editar/$1');
+$routes->get('categorias/eliminar/(:num)', 'Categorias::eliminar/$1');
+$routes->post('categorias/actualizar', 'Categorias::actualizar');
+$routes->get('categorias/eliminados', 'Categorias::eliminados');
+$routes->get('categorias/reingresar/(:num)', 'Categorias::reingresar/$1');

@@ -4,7 +4,7 @@
             <h4 class="mt-4"><?php echo $titulo?></h4>
         <div>
             <P>
-                <a href="<?php echo base_url();?>/categorias" class="btn btn-warning">unidades</a>
+                <a href="<?php echo base_url();?>/clientes" class="btn btn-warning">Clientes</a>
             </p>
         </div>
                        
@@ -12,25 +12,32 @@
                     <div class="card-body">
                         <table id="datatablesSimple">
                             <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Nombre</th>
-                                    <th></th>
+                            <tr>
+                                  <th>Id</th>
+                                   
+                                   <th>Nombre</th>
+                                   <th>Direccion</th>
+                                   <th>Telefono</th>
+                                   <th>Correo</th>
+                                   <th></th>
+                                   
+                                    
                                             
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach($datos as $dato) { ?>
                                     <tr>
-                                        <td><?php echo $dato['id']; ?></td>
+                                    <td><?php echo $dato['id']; ?></td>
                                         <td><?php echo $dato['nombre']; ?></td>
-                                      
-                                       <td><a href="#" data-href="<?php echo base_url().'/productos/reingresar/'.$dato['id']; ?>" 
+                                        <td><?php echo $dato['direccion']; ?></td>
+                                        <td><?php echo $dato['telefono']; ?></td>
+                                        <td><?php echo $dato['correo']; ?></td>
+                                        
+                                        <td><a href="#" data-href="<?php echo base_url().'/clientes/reingresar/'.$dato['id']; ?>" 
                                         data-bs-toggle="modal" data-bs-target="#modal-confirma" data-placement="top" title="Reingresar registro" >
                                         <i class="fa-sharp fa-solid fa-circle-up"></i>
                                         </a></td>
-
-                                      
                                     </tr>
                                 <?php }?>
                             </tbody>
@@ -39,7 +46,7 @@
             </div>
         </div>
     </main>
-
+    
 <!-- Modal -->
 <div class="modal fade" id="modal-confirma" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">

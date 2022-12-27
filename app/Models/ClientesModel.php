@@ -1,9 +1,9 @@
 <?php 
 namespace App\Models;
 use CodeIgniter\Model;
-class CategoriasModel extends Model
+class ClientesModel extends Model
 {
-    protected $table      = 'categorias';
+    protected $table      = 'clientes';
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true;
@@ -11,7 +11,8 @@ class CategoriasModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['nombre',  'activo'];
+    protected $allowedFields = ['nombre', 'direccion','telefono',
+    'correo','activo'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'fecha_alta';

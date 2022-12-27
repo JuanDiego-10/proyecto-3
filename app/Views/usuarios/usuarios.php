@@ -4,7 +4,8 @@
             <h4 class="mt-4"><?php echo $titulo?></h4>
         <div>
             <P>
-                <a href="<?php echo base_url();?>/categorias" class="btn btn-warning">unidades</a>
+                <a href="<?php echo base_url();?>/usuarios/nuevo" class="btn btn-info">Agregar</a>
+                <a href="<?php echo base_url();?>/usuarios/eliminados" class="btn btn-warning">Eliminados</a>
             </p>
         </div>
                        
@@ -14,7 +15,9 @@
                             <thead>
                                 <tr>
                                     <th>Id</th>
+                                    <th>Usuario</th>
                                     <th>Nombre</th>
+                                    <th></th>
                                     <th></th>
                                             
                                 </tr>
@@ -23,11 +26,19 @@
                                 <?php foreach($datos as $dato) { ?>
                                     <tr>
                                         <td><?php echo $dato['id']; ?></td>
+                                        <td><?php echo $dato['usuario']; ?></td>
                                         <td><?php echo $dato['nombre']; ?></td>
-                                      
-                                       <td><a href="#" data-href="<?php echo base_url().'/productos/reingresar/'.$dato['id']; ?>" 
-                                        data-bs-toggle="modal" data-bs-target="#modal-confirma" data-placement="top" title="Reingresar registro" >
-                                        <i class="fa-sharp fa-solid fa-circle-up"></i>
+
+                                        <td><a href="<?php echo base_url().'/usuarios/editar/'.$dato['id']; ?>" class="btn btn-warning">
+                                        <i class="fa-solid fa-pencil">
+                                        </i></a></td>
+
+                                        
+
+                                        <td><a href="#" data-href="<?php echo base_url().'/usuarios/eliminar/'.$dato['id']; ?>" 
+                                        data-bs-toggle="modal" data-bs-target="#modal-confirma" data-placement="top" 
+                                        title="Eliminar registro" class="btn btn-danger">
+                                        <i class="fa-solid fa-trash"></i>
                                         </a></td>
 
                                       
@@ -38,6 +49,7 @@
                 </div>
             </div>
         </div>
+
     </main>
 
 <!-- Modal -->
@@ -59,3 +71,4 @@
     </div>
   </div>
 </div>
+

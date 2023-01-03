@@ -1,0 +1,224 @@
+CRITICAL - 2023-01-02 00:08:08 --> FPDF error: Not a PNG file: http://localhost/proyecto/public/images/FOTO1.jpg
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 271.
+ 1 APPPATH\ThirdParty\fpdf\fpdf.php(1269): FPDF->Error('Not a PNG file: http://localhost/proyecto/public/images/FOTO1.jpg')
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1260): FPDF->_parsepngstream(resource (stream), 'http://localhost/proyecto/public/images/FOTO1.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsepng('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 4 APPPATH\Controllers\Ventas.php(135): FPDF->Image('http://localhost/proyecto/public/images/FOTO1.jpg', 30, 20, 20, 20, 'png')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Ventas->generaTicket('31')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 00:08:27 --> FPDF error: Not a PNG file: http://localhost/proyecto/public/images/FOTO1.jpg
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 271.
+ 1 APPPATH\ThirdParty\fpdf\fpdf.php(1269): FPDF->Error('Not a PNG file: http://localhost/proyecto/public/images/FOTO1.jpg')
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1260): FPDF->_parsepngstream(resource (stream), 'http://localhost/proyecto/public/images/FOTO1.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsepng('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 4 APPPATH\Controllers\Ventas.php(135): FPDF->Image('http://localhost/proyecto/public/images/FOTO1.jpg', 30, 20, 20, 20, 'png')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Ventas->generaTicket('32')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 00:10:03 --> FPDF error: Not a PNG file: http://localhost/proyecto/public/images/FOTO1.jpg
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 271.
+ 1 APPPATH\ThirdParty\fpdf\fpdf.php(1269): FPDF->Error('Not a PNG file: http://localhost/proyecto/public/images/FOTO1.jpg')
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1260): FPDF->_parsepngstream(resource (stream), 'http://localhost/proyecto/public/images/FOTO1.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsepng('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 4 APPPATH\Controllers\Ventas.php(135): FPDF->Image('http://localhost/proyecto/public/images/FOTO1.jpg', 30, 20, 20, 20, 'png')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Ventas->generaTicket('32')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 01:21:52 --> syntax error, unexpected identifier "nombreTienda", expecting variable or "{" or "$"
+in APPPATH\Controllers\Ventas.php on line 127.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Ventas.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Ventas')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Ventas')
+ 4 SYSTEMPATH\CodeIgniter.php(848): class_exists('\\App\\Controllers\\Ventas', true)
+ 5 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 01:21:55 --> syntax error, unexpected identifier "nombreTienda", expecting variable or "{" or "$"
+in APPPATH\Controllers\Ventas.php on line 127.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Ventas.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Ventas')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Ventas')
+ 4 SYSTEMPATH\CodeIgniter.php(848): class_exists('\\App\\Controllers\\Ventas', true)
+ 5 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 01:29:24 --> unlink(images/FOTO1.png): Resource temporarily unavailable
+in APPPATH\Controllers\Configuracion.php on line 109.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(images/FOTO1.png): Resource temporarily unavailable', 'APPPATH\\Controllers\\Configuracion.php', 109)
+ 2 APPPATH\Controllers\Configuracion.php(109): unlink('FCPATH\\images\\FOTO1.png')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Configuracion->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 01:29:53 --> unlink(images/FOTO1.png): Resource temporarily unavailable
+in APPPATH\Controllers\Configuracion.php on line 109.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(images/FOTO1.png): Resource temporarily unavailable', 'APPPATH\\Controllers\\Configuracion.php', 109)
+ 2 APPPATH\Controllers\Configuracion.php(109): unlink('FCPATH\\images\\FOTO1.png')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Configuracion->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 01:38:48 --> unlink(images/FOTO1.png): Resource temporarily unavailable
+in APPPATH\Controllers\Configuracion.php on line 109.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(images/FOTO1.png): Resource temporarily unavailable', 'APPPATH\\Controllers\\Configuracion.php', 109)
+ 2 APPPATH\Controllers\Configuracion.php(109): unlink('FCPATH\\images\\FOTO1.png')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Configuracion->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 01:49:32 --> unlink(images/): Is a directory
+in APPPATH\Controllers\Configuracion.php on line 109.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(images/): Is a directory', 'APPPATH\\Controllers\\Configuracion.php', 109)
+ 2 APPPATH\Controllers\Configuracion.php(109): unlink('FCPATH\\images')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Configuracion->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 01:50:17 --> unlink(images/FOTO1.png): Resource temporarily unavailable
+in APPPATH\Controllers\Configuracion.php on line 109.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(images/FOTO1.png): Resource temporarily unavailable', 'APPPATH\\Controllers\\Configuracion.php', 109)
+ 2 APPPATH\Controllers\Configuracion.php(109): unlink('FCPATH\\images\\FOTO1.png')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Configuracion->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 12:15:37 --> getimagesize(http://localhost/proyecto/public/images/FOTO1.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1238.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://localhost/proyecto/public/images/FOTO1.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\ThirdParty\\fpdf\\fpdf.php', 1238)
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1238): getimagesize('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 4 APPPATH\Controllers\Ventas.php(135): FPDF->Image('http://localhost/proyecto/public/images/FOTO1.jpg', 30, 20, 20, 20, 'jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Ventas->generaTicket('41')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 12:15:49 --> getimagesize(http://localhost/proyecto/public/images/FOTO1.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1238.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://localhost/proyecto/public/images/FOTO1.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\ThirdParty\\fpdf\\fpdf.php', 1238)
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1238): getimagesize('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 4 APPPATH\Controllers\Ventas.php(135): FPDF->Image('http://localhost/proyecto/public/images/FOTO1.jpg', 30, 20, 20, 20, 'jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Ventas->generaTicket('42')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 12:18:01 --> getimagesize(http://localhost/proyecto/public/images/FOTO1.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1238.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://localhost/proyecto/public/images/FOTO1.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\ThirdParty\\fpdf\\fpdf.php', 1238)
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1238): getimagesize('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 4 APPPATH\Controllers\Ventas.php(135): FPDF->Image('http://localhost/proyecto/public/images/FOTO1.jpg', 30, 20, 20, 20, 'jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Ventas->generaTicket('43')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 12:18:31 --> getimagesize(http://localhost/proyecto/public/images/FOTO1.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1238.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://localhost/proyecto/public/images/FOTO1.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\ThirdParty\\fpdf\\fpdf.php', 1238)
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1238): getimagesize('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 4 APPPATH\Controllers\Ventas.php(135): FPDF->Image('http://localhost/proyecto/public/images/FOTO1.jpg', 30, 20, 20, 20, 'jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Ventas->generaTicket('44')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 12:21:34 --> FPDF error: Not a JPEG file: http://localhost/proyecto/public/images/boleta.png
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 271.
+ 1 APPPATH\ThirdParty\fpdf\fpdf.php(1242): FPDF->Error('Not a JPEG file: http://localhost/proyecto/public/images/boleta.png')
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/boleta.png')
+ 3 APPPATH\Controllers\Ventas.php(135): FPDF->Image('http://localhost/proyecto/public/images/boleta.png', 30, 20, 20, 20, 'jpg')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Ventas->generaTicket('45')
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 12:21:58 --> getimagesize(http://localhost/proyecto/public/images/FOTO1.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1238.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://localhost/proyecto/public/images/FOTO1.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\ThirdParty\\fpdf\\fpdf.php', 1238)
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1238): getimagesize('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 4 APPPATH\Controllers\Ventas.php(135): FPDF->Image('http://localhost/proyecto/public/images/FOTO1.jpg', 30, 20, 20, 20, 'jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Ventas->generaTicket('45')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 12:25:03 --> getimagesize(http://localhost/proyecto/public/images/FOTO1.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1238.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://localhost/proyecto/public/images/FOTO1.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\ThirdParty\\fpdf\\fpdf.php', 1238)
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1238): getimagesize('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 4 APPPATH\Controllers\Ventas.php(135): FPDF->Image('http://localhost/proyecto/public/images/FOTO1.jpg', 30, 20, 20, 20, 'jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Ventas->generaTicket('45')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 12:25:27 --> getimagesize(http://localhost/proyecto/public/images/FOTO1.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1238.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://localhost/proyecto/public/images/FOTO1.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\ThirdParty\\fpdf\\fpdf.php', 1238)
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1238): getimagesize('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/FOTO1.jpg')
+ 4 APPPATH\Controllers\Ventas.php(135): FPDF->Image('http://localhost/proyecto/public/images/FOTO1.jpg', 30, 20, 20, 20, 'jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Ventas->generaTicket('46')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 12:25:53 --> getimagesize(http://localhost/proyecto/public/images/boleta.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1238.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://localhost/proyecto/public/images/boleta.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\ThirdParty\\fpdf\\fpdf.php', 1238)
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1238): getimagesize('http://localhost/proyecto/public/images/boleta.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/boleta.jpg')
+ 4 APPPATH\Controllers\Ventas.php(135): FPDF->Image('http://localhost/proyecto/public/images/boleta.jpg', 30, 20, 20, 20, 'jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Ventas->generaTicket('46')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 12:26:28 --> FPDF error: Not a JPEG file: http://localhost/proyecto/public/images/boleta.png
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 271.
+ 1 APPPATH\ThirdParty\fpdf\fpdf.php(1242): FPDF->Error('Not a JPEG file: http://localhost/proyecto/public/images/boleta.png')
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/boleta.png')
+ 3 APPPATH\Controllers\Ventas.php(135): FPDF->Image('http://localhost/proyecto/public/images/boleta.png', 30, 20, 20, 20, 'jpg')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Ventas->generaTicket('46')
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ventas))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 12:30:53 --> Undefined array key "existencia"
+in APPPATH\Views\productos\productos.php on line 34.
+ 1 APPPATH\Views\productos\productos.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "existencia"', 'APPPATH\\Views\\productos\\productos.php', 34)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\productos\\productos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('productos/productos', [], true)
+ 5 APPPATH\Controllers\Productos.php(51): view('productos/productos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-02 12:32:08 --> Undefined variable $producto
+in APPPATH\Views\productos\editar.php on line 9.
+ 1 APPPATH\Views\productos\editar.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'APPPATH\\Views\\productos\\editar.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\productos\\editar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('productos/editar', [], true)
+ 5 APPPATH\Controllers\Productos.php(124): view('productos/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Productos->editar('6')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

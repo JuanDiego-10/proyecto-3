@@ -1,0 +1,95 @@
+CRITICAL - 2023-01-03 00:17:50 --> Trying to access array offset on value of type null
+in APPPATH\Views\usuarios\editar.php on line 21.
+ 1 APPPATH\Views\usuarios\editar.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\usuarios\\editar.php', 21)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuarios\\editar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('usuarios/editar', [], true)
+ 5 APPPATH\Controllers\Usuarios.php(177): view('usuarios/editar', [...])
+ 6 APPPATH\Controllers\Usuarios.php(200): App\Controllers\Usuarios->editar(null, Object(CodeIgniter\Validation\Validation))
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Usuarios->actualizar()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-03 00:19:02 --> Trying to access array offset on value of type null
+in APPPATH\Views\usuarios\editar.php on line 21.
+ 1 APPPATH\Views\usuarios\editar.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\usuarios\\editar.php', 21)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuarios\\editar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('usuarios/editar', [], true)
+ 5 APPPATH\Controllers\Usuarios.php(177): view('usuarios/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Usuarios->editar('8')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-03 00:55:51 --> getimagesize(http://localhost/proyecto/public/images/LUFFYOP.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1238.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://localhost/proyecto/public/images/LUFFYOP.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\ThirdParty\\fpdf\\fpdf.php', 1238)
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1238): getimagesize('http://localhost/proyecto/public/images/LUFFYOP.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/LUFFYOP.jpg')
+ 4 APPPATH\Controllers\Compras.php(104): FPDF->Image('http://localhost/proyecto/public/images/LUFFYOP.jpg', 180, 10, 25, 25, 'jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Compras->generaCompraPdf('7')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-03 00:57:20 --> getimagesize(http://localhost/proyecto/public/images/LUFFYOP.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1238.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://localhost/proyecto/public/images/LUFFYOP.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\ThirdParty\\fpdf\\fpdf.php', 1238)
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1238): getimagesize('http://localhost/proyecto/public/images/LUFFYOP.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/LUFFYOP.jpg')
+ 4 APPPATH\Controllers\Compras.php(104): FPDF->Image('http://localhost/proyecto/public/images/LUFFYOP.jpg', 180, 10, 25, 25, 'jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Compras->generaCompraPdf('7')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-03 01:00:30 --> getimagesize(http://localhost/proyecto/public/images/LUFFYOP.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1238.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://localhost/proyecto/public/images/LUFFYOP.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\ThirdParty\\fpdf\\fpdf.php', 1238)
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1238): getimagesize('http://localhost/proyecto/public/images/LUFFYOP.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/LUFFYOP.jpg')
+ 4 APPPATH\Controllers\Compras.php(104): FPDF->Image('http://localhost/proyecto/public/images/LUFFYOP.jpg', 180, 10, 25, 25, 'jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Compras->generaCompraPdf('7')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-03 01:02:52 --> getimagesize(http://localhost/proyecto/public/images/LUFFYOP.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1238.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://localhost/proyecto/public/images/LUFFYOP.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\ThirdParty\\fpdf\\fpdf.php', 1238)
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1238): getimagesize('http://localhost/proyecto/public/images/LUFFYOP.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/LUFFYOP.jpg')
+ 4 APPPATH\Controllers\Compras.php(104): FPDF->Image('http://localhost/proyecto/public/images/LUFFYOP.jpg', 180, 10, 25, 25, 'jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Compras->generaCompraPdf('8')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-03 01:34:43 --> getimagesize(http://localhost/proyecto/public/images/LUFFYOP.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1238.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://localhost/proyecto/public/images/LUFFYOP.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\ThirdParty\\fpdf\\fpdf.php', 1238)
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1238): getimagesize('http://localhost/proyecto/public/images/LUFFYOP.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/LUFFYOP.jpg')
+ 4 APPPATH\Controllers\Compras.php(104): FPDF->Image('http://localhost/proyecto/public/images/LUFFYOP.jpg', 180, 10, 25, 25, 'jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Compras->generaCompraPdf('9')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-03 01:35:55 --> getimagesize(http://localhost/proyecto/public/images/LUFFYOP.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+
+in APPPATH\ThirdParty\fpdf\fpdf.php on line 1238.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'getimagesize(http://localhost/proyecto/public/images/LUFFYOP.jpg): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+', 'APPPATH\\ThirdParty\\fpdf\\fpdf.php', 1238)
+ 2 APPPATH\ThirdParty\fpdf\fpdf.php(1238): getimagesize('http://localhost/proyecto/public/images/LUFFYOP.jpg')
+ 3 APPPATH\ThirdParty\fpdf\fpdf.php(885): FPDF->_parsejpg('http://localhost/proyecto/public/images/LUFFYOP.jpg')
+ 4 APPPATH\Controllers\Compras.php(104): FPDF->Image('http://localhost/proyecto/public/images/LUFFYOP.jpg', 180, 10, 25, 25, 'jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Compras->generaCompraPdf('9')
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Compras))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

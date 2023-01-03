@@ -40,7 +40,6 @@ use ReflectionProperty;
  *
  * @property BaseConnection $db
  *
- * @method $this groupBy($by, ?bool $escape = null)
  * @method $this havingIn(?string $key = null, $values = null, ?bool $escape = null)
  * @method $this havingLike($field, string $match = '', string $side = 'both', ?bool $escape = null, bool $insensitiveSearch = false)
  * @method $this havingNotIn(?string $key = null, $values = null, ?bool $escape = null)
@@ -157,8 +156,8 @@ class Model extends BaseModel
 
     /**
      * Fetches the row of database from $this->table with a primary key
-     * matching $id.
-     * This method works only with dbCalls.
+     * matching $id. This methods works only with dbCalls
+     * This methods works only with dbCalls
      *
      * @param bool                  $singleton Single or multiple results
      * @param array|int|string|null $id        One primary key or an array of primary keys
@@ -189,8 +188,8 @@ class Model extends BaseModel
     }
 
     /**
-     * Fetches the column of database from $this->table.
-     * This method works only with dbCalls.
+     * Fetches the column of database from $this->table
+     * This methods works only with dbCalls
      *
      * @param string $columnName Column Name
      *
@@ -204,7 +203,7 @@ class Model extends BaseModel
     /**
      * Works with the current Query Builder instance to return
      * all results, while optionally limiting them.
-     * This method works only with dbCalls.
+     * This methods works only with dbCalls
      *
      * @param int $limit  Limit
      * @param int $offset Offset
@@ -227,7 +226,7 @@ class Model extends BaseModel
     /**
      * Returns the first row of the result set. Will take any previous
      * Query Builder calls into account when determining the result set.
-     * This method works only with dbCalls.
+     * This methods works only with dbCalls
      *
      * @return array|object|null
      */
@@ -252,11 +251,11 @@ class Model extends BaseModel
 
     /**
      * Inserts data into the current table.
-     * This method works only with dbCalls.
+     * This methods works only with dbCalls
      *
      * @param array $data Data
      *
-     * @return bool
+     * @return bool|Query
      */
     protected function doInsert(array $data)
     {
@@ -288,7 +287,7 @@ class Model extends BaseModel
 
     /**
      * Compiles batch insert strings and runs the queries, validating each row prior.
-     * This method works only with dbCalls.
+     * This methods works only with dbCalls
      *
      * @param array|null $set       An associative array of insert values
      * @param bool|null  $escape    Whether to escape values
@@ -314,7 +313,7 @@ class Model extends BaseModel
 
     /**
      * Updates a single record in $this->table.
-     * This method works only with dbCalls.
+     * This methods works only with dbCalls
      *
      * @param array|int|string|null $id
      * @param array|null            $data
@@ -340,16 +339,16 @@ class Model extends BaseModel
 
     /**
      * Compiles an update string and runs the query
-     * This method works only with dbCalls.
+     * This methods works only with dbCalls
      *
      * @param array|null  $set       An associative array of update values
      * @param string|null $index     The where key
      * @param int         $batchSize The size of the batch to run
      * @param bool        $returnSQL True means SQL is returned, false will execute the query
      *
-     * @return mixed Number of rows affected or FALSE on failure
-     *
      * @throws DatabaseException
+     *
+     * @return mixed Number of rows affected or FALSE on failure
      */
     protected function doUpdateBatch(?array $set = null, ?string $index = null, int $batchSize = 100, bool $returnSQL = false)
     {
@@ -359,14 +358,14 @@ class Model extends BaseModel
     /**
      * Deletes a single record from $this->table where $id matches
      * the table's primaryKey
-     * This method works only with dbCalls.
+     * This methods works only with dbCalls
      *
      * @param array|int|string|null $id    The rows primary key(s)
      * @param bool                  $purge Allows overriding the soft deletes setting.
      *
-     * @return bool|string
-     *
      * @throws DatabaseException
+     *
+     * @return bool|string
      */
     protected function doDelete($id = null, bool $purge = false)
     {
@@ -404,9 +403,9 @@ class Model extends BaseModel
     /**
      * Permanently deletes all rows that have been marked as deleted
      * through soft deletes (deleted = 1)
-     * This method works only with dbCalls.
+     * This methods works only with dbCalls
      *
-     * @return bool|string Returns a string if in test mode.
+     * @return bool|mixed
      */
     protected function doPurgeDeleted()
     {
@@ -418,7 +417,7 @@ class Model extends BaseModel
     /**
      * Works with the find* methods to return only the rows that
      * have been deleted.
-     * This method works only with dbCalls.
+     * This methods works only with dbCalls
      */
     protected function doOnlyDeleted()
     {
@@ -427,7 +426,7 @@ class Model extends BaseModel
 
     /**
      * Compiles a replace into string and runs the query
-     * This method works only with dbCalls.
+     * This methods works only with dbCalls
      *
      * @param array|null $data      Data
      * @param bool       $returnSQL Set to true to return Query String
@@ -443,7 +442,7 @@ class Model extends BaseModel
      * Grabs the last error(s) that occurred from the Database connection.
      * The return array should be in the following format:
      *  ['source' => 'message']
-     * This method works only with dbCalls.
+     * This methods works only with dbCalls
      *
      * @return array<string,string>
      */
@@ -497,7 +496,7 @@ class Model extends BaseModel
      * Loops over records in batches, allowing you to operate on them.
      * Works with $this->builder to get the Compiled select to
      * determine the rows to operate on.
-     * This method works only with dbCalls.
+     * This methods works only with dbCalls
      *
      * @throws DataException
      */
@@ -554,9 +553,9 @@ class Model extends BaseModel
     /**
      * Provides a shared instance of the Query Builder.
      *
-     * @return BaseBuilder
-     *
      * @throws ModelException
+     *
+     * @return BaseBuilder
      */
     public function builder(?string $table = null)
     {
@@ -646,15 +645,15 @@ class Model extends BaseModel
      * @param array|object|null $data
      * @param bool              $returnID Whether insert ID should be returned or not.
      *
-     * @return BaseResult|false|int|object|string
-     *
      * @throws ReflectionException
+     *
+     * @return BaseResult|false|int|object|string
      */
     public function insert($data = null, bool $returnID = true)
     {
         if (! empty($this->tempData['data'])) {
             if (empty($data)) {
-                $data = $this->tempData['data'];
+                $data = $this->tempData['data'] ?? null;
             } else {
                 $data = $this->transformDataToArray($data, 'insert');
                 $data = array_merge($this->tempData['data'], $data);
@@ -680,7 +679,7 @@ class Model extends BaseModel
     {
         if (! empty($this->tempData['data'])) {
             if (empty($data)) {
-                $data = $this->tempData['data'];
+                $data = $this->tempData['data'] ?? null;
             } else {
                 $data = $this->transformDataToArray($data, 'update');
                 $data = array_merge($this->tempData['data'], $data);
@@ -700,9 +699,9 @@ class Model extends BaseModel
      * @param object|string $data
      * @param bool          $recursive If true, inner entities will be casted as array as well
      *
-     * @return array|null Array
-     *
      * @throws ReflectionException
+     *
+     * @return array|null Array
      */
     protected function objectToRawArray($data, bool $onlyChanged = true, bool $recursive = false): ?array
     {

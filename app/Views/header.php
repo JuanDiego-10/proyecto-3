@@ -1,5 +1,9 @@
+<?php 
+    $user_session = session();
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8" />
@@ -7,31 +11,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>POS -COP</title>
-    <link href="<?php echo base_url(); ?>/css/style.css" rel="stylesheet" />
-    <link href="<?php echo base_url(); ?>/css/styles.css" rel="stylesheet" />
-    <script src="<?php echo base_url(); ?>/js/all.js"></script>
+    <title>POS</title>
 
+    <link href="<?php echo base_url(); ?>/css/styles.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>/js/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link href="<?php echo base_url(); ?>/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <!--DataTable CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="<?php echo base_url(); ?>/js/jquery-ui/jquery-ui.min.js"></script>
 </head>
 
-<body class="sb-nav-fixed">
+<body class="sb-nav-fixed" style="background: #f8f9fc">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">POS - CDP</a>
-        <!-- Sidebar Toggle-->
-        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        <a class="navbar-brand ps-3" href="<?php echo base_url() ?>/dashboard">POS - CDP</a>
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="fas fa-bars"></i></button>
 
         <!-- Navbar-->
-        <ul class="navbar-nav ms-auto  me-3 me-lg-4 me-md-3 my-2 my-md-0">
+        <ul class="navbar-nav ms-auto  me-3 me-lg-4 ">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"><?php echo $user_session->nombre; ?>
+                    &nbsp <img src="<?php echo base_url() . '/images/FOTO1.jpeg';?>" alt="mdo" width="32" height="32"
+                        class="rounded-circle">
+                </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Settings</a></li>
-                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item"
+                            href="<?php echo base_url(); ?>/usuarios/cambia_password">Privacidad</a></li>
+                    <li><a class="dropdown-item" href="/proyecto/public/configuracion">Configuracion</a></li>
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url(); ?>/usuarios/logout">Cerrar Sesion</a></li>
                 </ul>
             </li>
         </ul>
@@ -42,38 +61,91 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
 
+                        <!--DASHBOARD-->
+                        <a class="nav-link" href="<?php echo base_url() ?>/dashboard">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-house"></i></div>
+                            Dashboard
+                        </a>
 
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                            <div class="sb-nav-link-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+                        <!--PRODUCTOS-->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#prod"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-shop"></i></div>
                             Productos
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+
+                        <div class="collapse" id="prod" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="<?php echo base_url(); ?>/productos">Productos</a>
-                                <a class="nav-link" href="<?php echo base_url(); ?>/unidades">Unidades</a>
-                                <a class="nav-link" href="<?php echo base_url(); ?>/categorias">Categorias</a>
+                                <a class="nav-link" href="<?php echo base_url();?>/productos">Productos</a>
+                                <a class="nav-link" href="<?php echo base_url(); ?>/productos/nuevo">Formulario</a>
+                                <a class="nav-link" href="<?php echo base_url();?>/unidades">Unidades</a>
+                                <a class="nav-link" href="<?php echo base_url();?>/categorias">Categorias</a>
                             </nav>
                         </div>
-                        
-                        <a class="nav-link" href="<?php echo base_url(); ?>/clientes">
-                        <div class="sb-nav-link-icon"><i class="fa-thin fa-users"></i></div>clientes</a>
 
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#subAdministracion" aria-expanded="false" aria-controls="subAdministracion">
-                            <div class="sb-nav-link-icon"><i class="fa-thin fa-screwdriver-wrench"></i></div>
-                            Administracion
+                        <!--CLIENTES-->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#client"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-people-group"></i></div>
+                            Clientes
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
-                        <div class="collapse" id="subAdministracion" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <div class="collapse" id="client" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="<?php echo base_url(); ?>/configuracion">Configuracion</a>
-                                <a class="nav-link" href="<?php echo base_url(); ?>/usuarios">Usuarios</a> 
-                               
+                                <a class="nav-link" href="<?php echo base_url();?>/clientes">Clientes</a>
+                                <a class="nav-link" href="<?php echo base_url(); ?>/clientes/nuevo">Formulario</a>
                             </nav>
                         </div>
+
+                        <!--RECURSOS-->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#almacen"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                            Compras
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="almacen" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="<?php echo base_url(); ?>/compras/nuevo">Nueva compra</a>
+                                <a class="nav-link" href="<?php echo base_url();?>/compras">Registro de Compras</a>
+                            </nav>
+                        </div>
+
+                        <!--VENTAS-->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#ventas"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-cash-register"></i></div>
+                            Ventas
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="ventas" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="<?php echo base_url(); ?>/ventas/venta">Nueva venta</a>
+                                <a class="nav-link" href="<?php echo base_url(); ?>/ventas">Registro de ventas</a>
+                            </nav>
+                        </div>
+
+                        <a class="nav-link" href="<?php echo base_url(); ?>/usuarios">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-user-tie"></i></div>
+                            Usuarios
+                        </a>
+
+                        <!--<a class="nav-link" href="<?php echo base_url(); ?>/configuracion">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-gear"></i></div>
+                                Configuracion
+                                
+                            </a>-->
 
                     </div>
                 </div>
-
+                <!--<div class="sb-sidenav-footer">
+                        <div class="small">Presentado por: Efrain Saul Mayta Yujra</div><br>
+                        <img src="<?php echo base_url() . '/images/sistemas.jfif';?>" class="img-fluid rounded mx-auto d-block">
+                   
+                    </div>-->
             </nav>
         </div>

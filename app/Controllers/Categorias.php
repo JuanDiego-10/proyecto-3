@@ -12,67 +12,81 @@ class Categorias extends BaseController
     public function __construct()
     {
         $this->categorias = new CategoriasModel();
-
-
     }
+
     public function index($activo = 1)
     {
         $categorias = $this->categorias->where('activo',$activo)->findAll();
-        $data = ['titulo'=>'Categorias','datos'=>$categorias];
-        echo view('header');
-        echo view('categorias/categorias',$data);
-        echo view('footer');
+        $data = ['titulo' => 'Categorias', 'datos' => $categorias];
 
+        echo view('header');
+        echo view('categorias/categorias', $data);
+        echo view('footer');
     }
 
-    public function eliminados($activo = 0)
-    {
-        $categorias = $this->categorias->where('activo',$activo)->findAll();
-        $data = ['titulo'=>'Categorias eliminadas', 'datos'=>$categorias];
-        echo view('header');
-        echo view('categorias/eliminados',$data);
-        echo view('footer');
-
-    }
-
+    //Parar Crear
     public function nuevo()
     {
-        $data = ['titulo'=> 'Agregar categoria'];
-        echo view('header');
-        echo view('categorias/nuevo',$data);
-        echo view('footer');
+        $data = ['titulo' => 'Agregar Categoria'];
 
+        echo view('header');
+        echo view('categorias/nuevo', $data);
+        echo view('footer');
     }
+
     public function insertar()
     {
-        $this->categorias->save(['nombre' => $this->request->getPost('nombre')]);
+        $this->categorias -> save([
+            'nombre' => $this->request->getPost('nombre')
+        ]);
+
         return redirect()->to(base_url().'/categorias');
     }
 
+    //Para Editar
     public function editar($id)
     {
         $unidad = $this->categorias->where('id',$id)->first();
-        $data = ['titulo'=> 'Editar categoria','datos'=>$unidad];
-        echo view('header');
-        echo view('categorias/editar',$data);
-        echo view('footer');
+        $data = ['titulo' => 'Editar Categoria', 'datos' => $unidad];
 
+        echo view('header');
+        echo view('categorias/editar', $data);
+        echo view('footer');
     }
+
     public function actualizar()
     {
-        $this->categorias->update($this->request->getPost('id'), ['nombre' => $this->request->getPost('nombre')]);
+        $this->categorias -> update($this->request->getPost('id'),
+        [
+            'nombre' => $this->request->getPost('nombre')
+        ]);
+
         return redirect()->to(base_url().'/categorias');
     }
 
+    //Para Eliminar (valor 0)
     public function eliminar($id)
     {
-        $this->categorias->update($id, ['activo'=>0]);
+        $this->categorias->update($id, ['activo' => 0]);
         return redirect()->to(base_url().'/categorias');
     }
 
+    // VISUAL ELIMINADOS
+    public function eliminados($activo = 0)
+    {
+        $categorias = $this->categorias->where('activo',$activo)->findAll();
+        $data = ['titulo' => 'Categorias eliminadas', 'datos' => $categorias];
+
+        echo view('header');
+        echo view('categorias/eliminados', $data);
+        echo view('footer');
+    }
+
+    //Para reestablecer (valor 0)
     public function reingresar($id)
     {
-        $this->categorias->update($id, ['activo'=>1]);
+        $this->categorias->update($id, ['activo' => 1]);
         return redirect()->to(base_url().'/categorias');
     }
+
 }

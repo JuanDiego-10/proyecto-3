@@ -1,59 +1,51 @@
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
-            <h4 class="mt-4"><?php echo $titulo?></h4>
+            <h1 class="mt-4"><?php echo $titulo; ?></h1>
             
-            
-            <?php if(isset($validation)){ ?>
-                <div class="alert alert-danger" >
-            <?php echo $validation->listErrors(); ?>
+            <?php if(isset($validation)){?>
+                <div class="alert alert-danger" role="alert">
+                    <?php echo $validation->listErrors(); ?>
                 </div>
             <?php }?>
 
-            <form method="POST" action="<?php echo base_url();?>/clientes/insertar" autocomplete="off">
+            <form method="POST" action="<?php echo base_url(); ?>/clientes/insertar" autocomplete="off" >
             
-
             <div class="form-group">
                 <div class="row">
                     <div class="col-12 col-sm-6">
-                        <label>Nombre</label>
-                        <input class="form-control" id="nombre" name="nombre" type="text"
-                        autofocus required />
+                        <label>Nombre:</label>
+                        <input id="nombre" value="<?php echo set_value('nombre') ?>" class="form-control" type="text" name="nombre" autofocus required />
                     </div>
+
                     <div class="col-12 col-sm-6">
-                        <label>Direccion</label>
-                        <input class="form-control" id="direccion" name="direccion"
-                        value="<?php  echo set_value('direccion')?>" type="text" />
+                        <label>Direccion:</label>
+                        <input id="direccion" value="<?php echo set_value('direccion') ?>" class="form-control" type="text" name="direccion" required />
                     </div>
                 </div>
             </div>
 
+            <br>
 
             <div class="form-group">
                 <div class="row">
                     <div class="col-12 col-sm-6">
-                        <label>Telefono</label>
-                        <input class="form-control" id="telefono" name="telefono" type="text"
-                         />
+                        <label>Telefono:</label>
+                        <input id="telefono" value="<?php echo set_value('telefono') ?>" class="form-control" type="text" name="telefono"/>
                     </div>
+
                     <div class="col-12 col-sm-6">
-                        <label>Correo</label>
-                        <input class="form-control" id="correo" name="correo" type="text"
-                         />
+                        <label>Correo:</label>
+                        <input id="correo" value="<?php echo set_value('correo') ?>" class="form-control" type="text" name="correo" autofocus required />
                     </div>
-                    
                 </div>
             </div>
 
-                <br>
-                <a href="<?php echo base_url(); ?>/clientes" class="btn btn-primary">Regresar</a>
-                <button type="submit" class="btn btn-success">Guardar</button>
-           
+            <br>
+
+            <a href="<?php echo base_url(); ?>/clientes" class="btn btn-primary">Regresar</a>
+            <button type="submit" class="btn btn-success">Guardar</button>
 
             </form>
-                       
-               
-         </div>
+        </div>
     </main>
-
- 

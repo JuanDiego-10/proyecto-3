@@ -89,12 +89,7 @@ class File extends SplFileInfo
      */
     public function guessExtension(): ?string
     {
-        // naively get the path extension using pathinfo
-        $pathinfo = pathinfo($this->getRealPath() ?: $this->__toString()) + ['extension' => ''];
-
-        $proposedExtension = $pathinfo['extension'];
-
-        return Mimes::guessExtensionFromType($this->getMimeType(), $proposedExtension);
+        return Mimes::guessExtensionFromType($this->getMimeType());
     }
 
     /**
